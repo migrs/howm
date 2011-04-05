@@ -1,7 +1,7 @@
 ;;; howm-vars.el --- Wiki-like note-taking tool
 ;;; Copyright (C) 2005, 2006, 2007, 2008, 2009, 2010, 2011
 ;;;   HIRAOKA Kazuyuki <khi@users.sourceforge.jp>
-;;; $Id: howm-vars.el,v 1.50.2.2 2011-01-14 14:13:25 hira Exp $
+;;; $Id: howm-vars.el,v 1.50.2.3 2011-03-10 12:40:23 hira Exp $
 ;;;
 ;;; This program is free software; you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
@@ -679,9 +679,13 @@ When the value is elisp function, it is used instead of `howm-fake-grep'."
   "*Command name for fgrep.
 This variable is obsolete and may be removed in future.")
 (defvar howm-view-grep-default-option
-  (concat "-Hnr "
-          (mapconcat (lambda (d) (concat "--exclude-dir=" d))
-                     howm-excluded-dirs " ")))
+  (labels ((ed (d) (concat "--exclude-dir=" d)))
+    (let* ((has-ed (condition-case nil
+                       (eq 0 (call-process howm-view-grep-command nil nil nil
+                                           (ed "/") "--version"))
+                     (error nil)))
+           (opts (cons "-Hnr" (and has-ed (mapcar #'ed howm-excluded-dirs)))))
+      (mapconcat #'identity opts " "))))
 (howm-defcustom-risky howm-view-grep-option howm-view-grep-default-option
   "*Common grep option for howm."
   :type `(radio (const :tag "scan all files"
