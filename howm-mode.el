@@ -166,6 +166,7 @@ e.g. (\"-H\" \"::1\")")
 (howm-defvar-risky howm-template-rules
   '(("%title" . howm-template-title)
     ("%date" . howm-template-date)
+    ("%name" . howm-template-name)
     ("%file" . howm-template-previous-file)
     ("%cursor" . howm-template-cursor))) ;; Cursor must be the last rule.
 (defvar howm-template-date-format howm-dtime-format
@@ -882,12 +883,13 @@ We need entire-match in order to
          (af (and f (howm-abbreviate-file-name f))))
     (insert (howm-template-string which-template previous-buffer))
     (let* ((date (format-time-string howm-template-date-format))
+           (name (car (split-string (howm-file-name) "\\.")))
            (use-file (not not-use-file))
            (file (cond ((not use-file) "")
                        ((null f) "")
                        ((string= f (buffer-file-name)) "")
                        (t (format howm-template-file-format af)))))
-      (let ((arg `((title . ,title) (date . ,date) (file . ,file)))
+      (let ((arg `((title . ,title) (date . ,date) (file . ,file) (name . ,name)))
             (end (point-marker)))
         (howm-replace howm-template-rules arg beg end)
         end))))
@@ -926,6 +928,8 @@ is necessary.")
   (insert (cdr (assoc 'date arg))))
 (defun howm-template-previous-file (arg)
   (insert (cdr (assoc 'file arg))))
+(defun howm-template-name (arg)
+  (insert (cdr (assoc 'name arg))))
 (defun howm-template-cursor (arg)) ;; do nothing
 
 (defun howm-dup ()
