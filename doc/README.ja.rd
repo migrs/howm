@@ -1,7 +1,7 @@
 =begin
 
 = howm (一人お手軽 Wiki もどき)
-$Id: README.ja.rd,v 1.309.2.1 2011-01-02 12:05:56 hira Exp $
+$Id: README.ja.rd,v 1.309.2.2 2011-01-14 14:13:25 hira Exp $
 
 Emacs で断片的なメモをどんどんとるための環境です.
 分類機能はあえてつけません.
@@ -896,6 +896,10 @@ Emacs で断片的なメモをどんどんとるための環境です.
 === 更新記録
 
 thx > patch・改良案・指摘をくださった皆様
+
+* リリース予定版 howm-1.3.9.2rc1 [2011-01-14]
+  * fix: howm-vars.elc ロード時の警告「old-style backqoute detected!」を回避.
+    ((<thx|URL:http://howm.sourceforge.jp/cgi-bin/hiki/hiki.cgi?BugReportPaste>))
 
 * リリース版 howm-1.3.9.1 [2011-01-02]
   * fix: emacs-24.0.50 でのエラー

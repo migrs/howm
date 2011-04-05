@@ -1,7 +1,7 @@
 ;;; howm-vars.el --- Wiki-like note-taking tool
 ;;; Copyright (C) 2005, 2006, 2007, 2008, 2009, 2010, 2011
 ;;;   HIRAOKA Kazuyuki <khi@users.sourceforge.jp>
-;;; $Id: howm-vars.el,v 1.50.2.1 2011-01-02 12:05:56 hira Exp $
+;;; $Id: howm-vars.el,v 1.50.2.2 2011-01-14 14:13:25 hira Exp $
 ;;;
 ;;; This program is free software; you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
@@ -35,14 +35,37 @@
        (defmacro ,risky
          (,gsymbol &rest ,gargs)
          ,docstring
-         (let ((command ',orig)
-               (symbol ,gsymbol)
-               (args ,gargs))
-           `(progn
-              ;; (,',orig ...) doesn't work.
-              ;; So I need to bind temporal variables outside nested backquote.
-              (,command ,symbol ,@args)
-              (put ',symbol 'risky-local-variable t)))))))
+         (howm-define-risky-command-body ',orig ,gsymbol ,gargs)))))
+
+;; [2011-01-13]
+;; I split this function from howm-define-risky-command for avoiding
+;; nested backquotes. Nested backquotes are byte-compiled to
+;; old-style-backquotes, that cause warnings when *.elc is loaded.
+(defun howm-define-risky-command-body (command symbol args)
+  `(progn
+     (,command ,symbol ,@args)
+     (put ',symbol 'risky-local-variable t)))
+
+;; ;; This code is byte-compiled to old-style-backquotes. Sigh...
+;; (defmacro howm-define-risky-command (risky orig)
+;;   "Define a macro RISKY which is risky-version of ORIG."
+;;   (let* ((gsymbol (howm-cl-gensym))
+;;          (gargs (howm-cl-gensym))
+;;          (docstring (format "Do `%s' and set risky-local-variable property."
+;;                             orig)))
+;;     `(progn
+;;        (put ',risky 'lisp-indent-hook 'defun)
+;;        (defmacro ,risky
+;;          (,gsymbol &rest ,gargs)
+;;          ,docstring
+;;          (let ((command ',orig)
+;;                (symbol ,gsymbol)
+;;                (args ,gargs))
+;;            `(progn
+;;               ;; (,',orig ...) doesn't work.
+;;               ;; So I need to bind temporal variables outside nested backquote.
+;;               (,command ,symbol ,@args)
+;;               (put ',symbol 'risky-local-variable t)))))))
 
 (howm-define-risky-command howm-defvar-risky defvar)
 (howm-define-risky-command howm-defcustom-risky defcustom)
@@ -667,7 +690,6 @@ This variable is obsolete and may be removed in future.")
                        ,(concat howm-view-grep-default-option
                                 " --include=*.howm"))
                 string)
-  :group 'howm-efficiency
   :group 'howm-grep)
 (howm-defcustom-risky howm-view-grep-extended-option "-E"
   "*Grep option for extended regular expression."

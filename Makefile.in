@@ -15,7 +15,7 @@
 @SET_MAKE@
 
 # shamelessly copied from navi2ch-cvs-0.0.20031209
-# $Id: Makefile.in,v 1.344.2.1 2011-01-02 12:05:57 hira Exp $
+# $Id: Makefile.in,v 1.344.2.2 2011-01-14 14:13:26 hira Exp $
 
 VPATH = @srcdir@
 pkgdatadir = $(datadir)/@PACKAGE@
