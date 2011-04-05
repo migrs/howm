@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1><a name="label-0" id="label-0">howm (一人お手軽 Wiki もどき)</a></h1><!-- RDLabel: "howm (一人お手軽 Wiki もどき)" -->
-<p>$Id: README-j.html,v 1.105 2010-12-29 13:39:52 hira Exp $</p>
+<p>$Id: README-j.html,v 1.107 2010-12-30 14:47:58 hira Exp $</p>
 <p>Emacs で断片的なメモをどんどんとるための環境です.
 分類機能はあえてつけません.
 かわりに, 全文検索とメモ間リンクが手軽にできるようにしました.
@@ -1254,32 +1254,21 @@ make test</pre></li>
 <h3><a name="label-18" id="label-18">更新記録</a></h3><!-- RDLabel: "更新記録" -->
 <p>thx &gt; patch・改良案・指摘をくださった皆様</p>
 <ul>
-<li>リリース予定版 howm-1.3.9rc1 [2010-12-29]
+<li>リリース版 howm-1.3.9 [2010-12-30]
 <ul>
 <li>Note
 <ul>
 <li>ほとんど変更はありませんが, また一年ほどたったのでリリースしておきます.</li>
-<li>howm-test100702 との違いは, README の手直しや ext/tag2plan の削除だけ.</li>
+<li>howm-test100702 との違いは, ドキュメントの微修正や ext/tag2plan の削除だけ.</li>
 <li>このリリースが済んだら, デフォルト設定を変えて
       隠し機能を公式化しただけのものを howm-1.4.0 としてリリースする予定です.</li>
-</ul></li>
-<li>変更・改良
-<ul>
-<li>メニューに「%here%(howm-menu-search "[断]片的" full t)」と書けば,
-      「断片的」を含むメモの内容全体をメニューに埋め込み.
-      <a href="http://sourceforge.jp/projects/howm/lists/archive/eng/2010/000097.html">thx</a>
-      &gt; Morgan Veyret さん (morgan.veyret at gmail.com).
-      (undocumented)
-<ul>
-<li>単に "断片的" としないのは, メニューファイル自身がヒットするのを避ける小細工</li>
-</ul></li>
 </ul></li>
 <li>fix
 <ul>
 <li>メニューから y キー(または [予定] 上で RET)で予定表を開いたとき,
       内容バッファがカーソル位置のメモになっていなかった.
       <a href="http://pc12.2ch.net/test/read.cgi/unix/1141892764/826">thx</a></li>
-<li>README の古い記述を手直し</li>
+<li>ドキュメントの古い箇所を手直し</li>
 <li>メンテされていないツール(ext/tag2plan)を削除</li>
 </ul></li>
 </ul></li>
@@ -2102,6 +2091,16 @@ make test</pre></li>
 <ul>
 <li>仕様もインタフェースもまだ叩き台.</li>
 <li>メモを勝手に書きかえる危険な操作なので, バックアップをとってから!</li>
+</ul></li>
+</ul></li>
+<li>1.3.9
+<ul>
+<li>メニューに「%here%(howm-menu-search "[断]片的" full t)」と書けば,
+      「断片的」を含むメモの内容全体をメニューに埋め込み.
+      <a href="http://sourceforge.jp/projects/howm/lists/archive/eng/2010/000097.html">thx</a>
+      &gt; Morgan Veyret さん (morgan.veyret at gmail.com).
+<ul>
+<li>単に "断片的" としないのは, メニューファイル自身がヒットするのを避ける小細工</li>
 </ul></li>
 </ul></li>
 </ul></li>

@@ -1,7 +1,7 @@
 =begin
 
 = howm (一人お手軽 Wiki もどき)
-$Id: README.ja.rd,v 1.308 2010-12-29 13:33:10 hira Exp $
+$Id: README.ja.rd,v 1.309 2010-12-30 14:38:44 hira Exp $
 
 Emacs で断片的なメモをどんどんとるための環境です.
 分類機能はあえてつけません.
@@ -897,24 +897,17 @@ Emacs で断片的なメモをどんどんとるための環境です.
 
 thx > patch・改良案・指摘をくださった皆様
 
-* リリース予定版 howm-1.3.9rc1 [2010-12-29]
+* リリース版 howm-1.3.9 [2010-12-30]
   * Note
     * ほとんど変更はありませんが, また一年ほどたったのでリリースしておきます.
-    * howm-test100702 との違いは, README の手直しや ext/tag2plan の削除だけ.
+    * howm-test100702 との違いは, ドキュメントの微修正や ext/tag2plan の削除だけ.
     * このリリースが済んだら, デフォルト設定を変えて
       隠し機能を公式化しただけのものを howm-1.4.0 としてリリースする予定です.
-  * 変更・改良
-    * メニューに「%here%(howm-menu-search "[断]片的" full t)」と書けば,
-      「断片的」を含むメモの内容全体をメニューに埋め込み.
-      ((<thx|URL:http://sourceforge.jp/projects/howm/lists/archive/eng/2010/000097.html>))
-      > Morgan Veyret さん (morgan.veyret at gmail.com).
-      (undocumented)
-      * 単に "断片的" としないのは, メニューファイル自身がヒットするのを避ける小細工
   * fix
     * メニューから y キー(または [予定] 上で RET)で予定表を開いたとき,
       内容バッファがカーソル位置のメモになっていなかった.
       ((<thx|URL:http://pc12.2ch.net/test/read.cgi/unix/1141892764/826>))
-    * README の古い記述を手直し
+    * ドキュメントの古い箇所を手直し
     * メンテされていないツール(ext/tag2plan)を削除
 
 * リリース版 howm-1.3.8 [2009-12-31]
@@ -1508,6 +1501,12 @@ thx > patch・改良案・指摘をくださった皆様
       ((<thx|URL:http://pc11.2ch.net/test/read.cgi/unix/1141892764/671>))
       * 仕様もインタフェースもまだ叩き台.
       * メモを勝手に書きかえる危険な操作なので, バックアップをとってから!
+  * 1.3.9
+    * メニューに「%here%(howm-menu-search "[断]片的" full t)」と書けば,
+      「断片的」を含むメモの内容全体をメニューに埋め込み.
+      ((<thx|URL:http://sourceforge.jp/projects/howm/lists/archive/eng/2010/000097.html>))
+      > Morgan Veyret さん (morgan.veyret at gmail.com).
+      * 単に "断片的" としないのは, メニューファイル自身がヒットするのを避ける小細工
 
 * …履歴抜粋… (((<URL:OLD.rd>)) 参照)
   * [2005-08-02] 1.3.0 alias. M-x customize. タイトル表示.
