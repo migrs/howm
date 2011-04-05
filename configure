@@ -1718,7 +1718,7 @@ ac_link='$CC -o conftest$ac_exeext $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $
 ac_compiler_gnu=$ac_cv_c_compiler_gnu
 
 
-#AM_INIT_AUTOMAKE(howm, 'test110310')
+#AM_INIT_AUTOMAKE(howm, 'test110320')
 am__api_version='1.11'
 
 ac_aux_dir=
@@ -2186,7 +2186,7 @@ fi
 
 # Define the identity of the package.
  PACKAGE=howm
- VERSION='1.3.9.2rc2'
+ VERSION='1.3.9.2rc3'
 
 
 cat >>confdefs.h <<_ACEOF
@@ -2591,15 +2591,15 @@ else
 if test -z "${howmdir}"; then
   { $as_echo "$as_me:${as_lineno-$LINENO}: checking where howm files should go" >&5
 $as_echo_n "checking where howm files should go... " >&6; }
-if test "${cv_howmdir+set}" = set; then :
+if test "${ac_cv_howmdir+set}" = set; then :
   $as_echo_n "(cached) " >&6
 else
-          cv_howmdir='${lispdir}/howm'
+          ac_cv_howmdir='${lispdir}/howm'
 
 fi
-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $cv_howmdir" >&5
-$as_echo "$cv_howmdir" >&6; }
-  howmdir="$cv_howmdir"
+{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_howmdir" >&5
+$as_echo "$ac_cv_howmdir" >&6; }
+  howmdir="$ac_cv_howmdir"
 fi
 
 fi
@@ -2618,15 +2618,15 @@ else
 if test -z "${docdir}"; then
   { $as_echo "$as_me:${as_lineno-$LINENO}: checking where doc files should go" >&5
 $as_echo_n "checking where doc files should go... " >&6; }
-if test "${cv_docdir+set}" = set; then :
+if test "${ac_cv_docdir+set}" = set; then :
   $as_echo_n "(cached) " >&6
 else
-          cv_docdir='${datadir}/howm/doc'
+          ac_cv_docdir='${datadir}/howm/doc'
 
 fi
-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $cv_docdir" >&5
-$as_echo "$cv_docdir" >&6; }
-  docdir="$cv_docdir"
+{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_docdir" >&5
+$as_echo "$ac_cv_docdir" >&6; }
+  docdir="$ac_cv_docdir"
 fi
 
 fi
@@ -2645,15 +2645,15 @@ else
 if test -z "${extdir}"; then
   { $as_echo "$as_me:${as_lineno-$LINENO}: checking where ext files should go" >&5
 $as_echo_n "checking where ext files should go... " >&6; }
-if test "${cv_extdir+set}" = set; then :
+if test "${ac_cv_extdir+set}" = set; then :
   $as_echo_n "(cached) " >&6
 else
-          cv_extdir='${datadir}/howm/ext'
+          ac_cv_extdir='${datadir}/howm/ext'
 
 fi
-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $cv_extdir" >&5
-$as_echo "$cv_extdir" >&6; }
-  extdir="$cv_extdir"
+{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_extdir" >&5
+$as_echo "$ac_cv_extdir" >&6; }
+  extdir="$ac_cv_extdir"
 fi
 
 fi

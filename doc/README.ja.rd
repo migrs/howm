@@ -1,7 +1,7 @@
 =begin
 
 = howm (一人お手軽 Wiki もどき)
-$Id: README.ja.rd,v 1.309.2.3 2011-03-10 12:40:23 hira Exp $
+$Id: README.ja.rd,v 1.309.2.4 2011-03-19 21:21:34 hira Exp $
 
 Emacs で断片的なメモをどんどんとるための環境です.
 分類機能はあえてつけません.
@@ -896,6 +896,10 @@ Emacs で断片的なメモをどんどんとるための環境です.
 === 更新記録
 
 thx > patch・改良案・指摘をくださった皆様
+
+* リリース予定版 howm-1.3.9.2rc3 [2011-03-20]
+  * fix: configure 時の警告「suspicious cache-id」を回避
+    * 対象は howm-1.3.9.2rc2 と howm-test110310 のみ
 
 * リリース予定版 howm-1.3.9.2rc2 [2011-03-10]
   * fix: mac で grep 使用時にエラーが出ていた

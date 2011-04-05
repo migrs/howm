@@ -1,3 +1,11 @@
+2011-03-20  HIRAOKA Kazuyuki  <khi@users.sourceforge.jp>
+
+	* configure.in: version 1.3.9.2rc3
+
+2011-03-11  HIRAOKA Kazuyuki  <khi@users.sourceforge.jp>
+
+	* configure.in: fix warning "suspicious cache-id" in autoconf.
+
 2011-03-10  HIRAOKA Kazuyuki  <khi@users.sourceforge.jp>
 
 	* configure.in: version 1.3.9.2rc2
