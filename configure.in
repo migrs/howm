@@ -1,9 +1,9 @@
 # shamelessly copied from navi2ch-cvs-0.0.20031209
-# $Id: configure.in,v 1.202 2009-12-31 12:15:10 hira Exp $
+# $Id: configure.in,v 1.205 2010-12-29 13:33:11 hira Exp $
 
 AC_INIT(howm.el)
-#AM_INIT_AUTOMAKE(howm, 'test091231')
-AM_INIT_AUTOMAKE(howm, '1.3.8')
+#AM_INIT_AUTOMAKE(howm, 'test101229')
+AM_INIT_AUTOMAKE(howm, '1.3.9rc1')
 AM_MAINTAINER_MODE
 
 # Emacs set environment variable EMACS as t

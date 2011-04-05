@@ -1,11 +1,12 @@
 =begin
-$Id: OLD.rd,v 1.13 2008-10-07 12:48:10 hira Exp $
+$Id: OLD.rd,v 1.14 2010-12-29 13:33:11 hira Exp $
 
 * 目次
   * ((<古い更新履歴>))
   * ((<古い告知>))
   * ((<旧版からの移行>))
   * ((<古いカスタマイズ法>))
+  * ((<古い参考リンク>))
 
 = 古い更新履歴
 
@@ -2082,5 +2083,99 @@ $Id: OLD.rd,v 1.13 2008-10-07 12:48:10 hira Exp $
             ))
 
 * もっといろいろいじるには, *.el 冒頭を参照
+
+= 古い参考リンク
+
+* ((<Wiki|URL:http://c2.com/cgi/wiki>)):
+  web で誰でも編集＋お手軽リンク＋お手軽フォーマット
+  * ((<WikiModeDiscussion|URL:http://www.emacswiki.org/cgi-bin/wiki.pl/WikiModeDiscussion>))
+    (EmacsWiki): Emacs での Wiki
+  * ((<RWiki-mode|URL:http://pub.cozmixng.org/~the-rwiki/rw-cgi.rb?cmd=view;name=rwiki-mode>))
+    (RWiki): RWiki を Emacs から使う案
+  * ((<QP-Wiki|URL:http://pitecan.com/UnixMagazine/>))
+    (増井俊之さん): PDA で Wiki
+  * ((<HashedWiki|URL:http://www.google.com/search?q=hashedwiki>))
+    (SHIMADA Keiki さん): パラグラフ指向 Wiki
+  * ((<ishinao さんの各種ツール|URL:http://ishinao.net/>)):
+    Wiki にとらわれないアイデア満載
+  * ((<「日本発の wiki クローンリスト」|URL:http://www.yamdas.org/column/technique/clonelist.html>))
+    ((<「2」|URL:http://www.yamdas.org/column/technique/clonelist2.html>))
+    (yomoyomo さん)
+* HyperCard: card 型 database 的 visual script 言語環境???
+  * ((<「HyperCard」|URL:http://www.hyuki.com/yukiwiki/wiki.cgi?HyperCard>))
+    (YukiWiki)
+  * ((<「HyperCardのリアルタイム性」|URL:http://web.archive.org/web/20040111061953/http://mwave.sppd.ne.jp/wiki/pukiwiki.php?%5b%5bHyperCard%A4%CE%A5%EA%A5%A2%A5%EB%A5%BF%A5%A4%A5%E0%C0%AD%5d%5d>))
+    (SsPukiWiki)
+  * ((<「ハイパーカードでつくるオフィスシステム」|URL:http://www.kanzaki.com/hc/MacUser.html>))
+    (神崎正英さん)
+* メモとり環境
+  * 分類せず, 時間順と全文検索で管理
+    * ((<Q-Pocket|URL:http://pitecan.com/UnixMagazine/>))
+      (増井俊之さん):
+      PDA 版も
+    * ChangeLog メモ
+      * ((<「Unixのメモ技術」|URL:http://namazu.org/~satoru/unimag/1/>))
+        (高林哲さん)
+      * ((<「私の ChangeLog メモ活用法」|URL:http://nais.to/~yto/doc/zb/0016.html>))
+        (山下達雄さん)
+      * ((<「ChangeLog メモを試してみよう」|URL:http://pop-club.hp.infoseek.co.jp/emacs/changelog.html>))
+        (安宅正之さん)
+  * ((<簑系・超簑|URL:http://www.google.com/search?q=%E2%C0%8Cn+%92%B4%96%AA>))
+    (syo さん): ChangeLog + 目次・並べかえ・hyper link って感じ?
+  * スクラップブック
+    * ((<紙 2001|URL:http://www.vector.co.jp/soft/win95/writing/se120325.html>))
+      (洛西一周さん): 定番
+    * ((<WeBoX|URL:http://webox.sakura.ne.jp/software/webox/>))
+      (中村聡史さん): すごくいいらしい
+  * その他の Emacs 用ツール
+    * ((<notes-mode|URL:http://www.isi.edu/~johnh/SOFTWARE/NOTES_MODE/>))
+      (John Heidemann さん):
+      link の便利さを知りました
+      * ((<notes-mode と memo-mode の比較論|URL:http://mibai.tec.u-ryukyu.ac.jp/~oshiro/Programs/others/compare-notes-and-memo-mode.html>))
+        (西本孝志さん)
+    * ((<memoma|URL:http://web.archive.org/web/20040803170229/http://www.jaist.ac.jp/~tetsu/memoma/memoma.html>))
+      (原田哲治さん): MH 形式 → メールリーダでも読める
+    * ((<Um4|URL:http://www.d4.dion.ne.jp/~usuda/emacs/index.html>))
+      (臼田拓史さん): いろいろ保存メニュー
+    * rd-memo
+      (拙作. 開発終了 → ((<tar.gz|URL:http://howm.sourceforge.jp/a/rd-memo.tar.gz>)))
+      * ((<「コンピュータ環境でのメモ」|URL:http://pub.cozmixng.org/~the-rwiki/rw-cgi.rb?cmd=view;name=%A5%B3%A5%F3%A5%D4%A5%E5%A1%BC%A5%BF%B4%C4%B6%AD%A4%C7%A4%CE%A5%E1%A5%E2>))
+        (Toshさん): Wiki に注目したきっかけ
+  * howm 関連
+    * 移植
+      * ((<howm-mode.vim|URL:http://sworddancer.funkyboy.jp/howm_vim/>))
+        (七島功一さん)
+        ((<＋α|URL:http://www.google.com/search?q=vim+howm+%82%AD%82%D3%82%F1>)): vim 版
+      * ((<howm-wrap|URL:http://homepage3.nifty.com/~ko-ji/>))
+        (kimura さん)と
+        ((<howm-helper|URL:http://www.geocities.co.jp/Milano-Cat/2067/howm-init.html>))
+        (deecay さん): xyzzy 版
+      * ((<howm.mac|URL:http://mrm.seesaa.net/category/789739.html>))
+        (Mr.M さん)
+        ((<＋α|URL:http://howm.sourceforge.jp/cgi-bin/hiki/hiki.cgi?HideMaru>)): 秀丸版
+    * 浮沈式 todo リスト
+      * ((<wikilog|URL:http://web.archive.org/web/20040308005605/http://koten.hypermart.net/wikilog_rc01.l>))
+        (Gonza さん): xyzzy エディタ用の, Wiki + ChangeLog メモ
+        → ((<経緯|URL:http://pc2.2ch.net/test/read.cgi/win/1053880433/n29-36>))
+      * ((<howm式TODO管理WEBアプリ|URL:http://web.archive.org/web/20060128122538/http://www.lyricfathom.com/pukiwiki/pukiwiki.php?howm%BC%B0TODO%B4%C9%CD%FDWEB%A5%A2%A5%D7%A5%EA>))
+        (鮎川さん): PHP での実装
+      * ((<wema|URL:http://wema.sourceforge.jp/>))
+        (ふしはらかんさん): 付箋ベースの Wiki 的なもの.
+        付箋自体が上下に移動. 脱帽.
+      * ((<LesserWiki|URL:http://lesserwiki.org/>))
+        (yatsuさん): Ajax な Wiki
+      * ((<Whem|URL:http://www.n314.com/whem/?action=ExecLogin&mail=guest>))
+        (Nishimuraさん): Web用マルチユーザメモツール. goto/come-from リンクあり.
+* お気にいり
+  * ((<memo-mode|URL:http://mibai.tec.u-ryukyu.ac.jp/~oshiro/Programs/>))
+    (OSHIRO Naoki さん): 箇条書き支援. べたぼれ.
+  * ((<get-date|URL:http://mibai.tec.u-ryukyu.ac.jp/~oshiro/Programs/>))
+    (OSHIRO Naoki さん): 今日の日付を反射的に入力. べたぼれ.
+  * ((<migemo|URL:http://migemo.namazu.org/>))
+    (高林哲さん): ローマ字を入れるだけで日本語も検索. 愛用.
+  * ((<rdtool|URL:http://www.google.com/search?q=rdtool>))
+    (Toshさん): この README で使ってるドキュメントフォーマット. 愛用.
+  * ((<elscreen|URL:http://www.morishima.net/~naoto/j/software/elscreen/>))
+    (Naoto Morishimaさん): GNU screen の Emacs 版. 愛用.
 
 =end

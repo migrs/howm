@@ -1,7 +1,7 @@
 =begin
 
 = howm (一人お手軽 Wiki もどき)
-$Id: README.ja.rd,v 1.304 2009-12-31 12:05:50 hira Exp $
+$Id: README.ja.rd,v 1.308 2010-12-29 13:33:10 hira Exp $
 
 Emacs で断片的なメモをどんどんとるための環境です.
 分類機能はあえてつけません.
@@ -453,22 +453,14 @@ Emacs で断片的なメモをどんどんとるための環境です.
         * ~/.emacs(.emacs.el かも) で↓のように
             (setq howm-directory "c:/cygwin/home/howm/")
         * cygwin から見た / と emacs から見た / が食い違うとかいう話.
-    * emacsCE:
-      どこかで動いたって見たような?
-      ((<thx|URL:http://pc.2ch.net/test/read.cgi/unix/1063800495/125>))
     * xemacs:
-      いただいた patch を取り込みました
-      ((<thx|URL:http://pc.2ch.net/test/read.cgi/unix/1063800495/209>))
       * font-lock のメッセージを抑制すると速くなるそう.
-        thx > ((<笠原さん|URL:http://www.nc.kyushu-u.ac.jp/~kasahara/diary/2004/01b.html>))
+        thx > ((<笠原さん|URL:http://eron.info/k/diary/>))
           (setq font-lock-verbose nil)
-    * carbon emacs:
-      対応?
-      ((<thx|URL:http://pc.2ch.net/test/read.cgi/unix/1063800495/229>))
     * Linux Zaurus:
       ((<Wiki|URL:http://howm.sourceforge.jp/cgi-bin/hiki/hiki.cgi?LinuxZaurus>))
       を参照ください.
-      ((<thx|URL:http://pc.2ch.net/test/read.cgi/unix/1063800495/100>))
+      thx > ((<100|URL:http://www.bookshelf.jp/2ch/unix/1063800495.html>))
   * SKK を使う場合
     * .emacs に以下を書いておかないと, Dired-X に C-x C-j を奪われます
         (setq dired-bind-jump nil)
@@ -476,9 +468,9 @@ Emacs で断片的なメモをどんどんとるための環境です.
     * viper-mode より先に howm-mode をロードしておく
       * post-command-hook に悪さする??
   * コンソール (emacs -nw) の場合
-    * emacs21 なら使える?
+    * 下線が表示されない端末なら
         (set-face-foreground 'action-lock-face "blue") ;; 下線のかわりに色つけ
-  * ((<RD|URL:http://www2.pos.to/~tosh/ruby/rdtool/ja/>))を使う場合
+  * ((<RD|URL:http://www.ruby-lang.org/ja/man/html/RD.html>))を使う場合
     * <<< が RD の include とかぶる
     * 対策例
       * include は使わない. 行のはじめに <<< を書かないよう注意する.
@@ -565,9 +557,8 @@ Emacs で断片的なメモをどんどんとるための環境です.
 * もっと軽く (cf. ((<富豪的プログラミング|URL:http://pitecan.com/fugo.html>)))
   * 上述の M-x customize で [Howm Efficiency] を参照
   * 特に, 本気で使うには howm-view-use-grep の設定をおすすめします
-  * Tips: gc-cons-threshold の値を増やすと速くなる場合がある
-    ((<ref|URL:http://pc8.2ch.net/test/read.cgi/unix/1077881095/220>))
-    ((<ref|URL:http://pc8.2ch.net/test/read.cgi/unix/1077881095/234-236n>))
+  * Tips: gc-cons-threshold の値を増やすと速くなる場合がある.
+    ref > ((<220,234-236|URL:http://www.bookshelf.jp/2ch/unix/1077881095.html>))
       (setq gc-cons-threshold (* 4000 10000))
   * Tips: grep-2.5 では, 環境変数 LANG を C にしておくと,
     マルチバイト対応がオフになって速くなる
@@ -667,7 +658,7 @@ Emacs で断片的なメモをどんどんとるための環境です.
       (setq howm-dtime-format "[%a %b %d %H:%M:%S %Y]") ;; {_}
       (setq howm-template-date-format "[%Y-%m-%d %H:%M]") ;; テンプレート
   * 「file://…」や「http://…」の変更 (ましな設定募集)
-    ((<thx|URL:http://pc.2ch.net/test/read.cgi/unix/1063800495/945>))
+    thx > ((<945|URL:http://www.bookshelf.jp/2ch/unix/1063800495.html>))
       ;; howm (正確には action-lock.el) のロードより前に.
       ;; ・file://…
       (setq action-lock-open-regexp
@@ -703,16 +694,15 @@ Emacs で断片的なメモをどんどんとるための環境です.
       (switch-to-buffer howm-menu-name))
     (add-hook 'howm-menu-hook 'my-howm-menu-hook)
 
-* ((<RD|URL:http://www2.pos.to/~tosh/ruby/rdtool/ja/>))を使う場合:
-  ((<"行頭の * でエントリの開閉ができるように"|URL:http://pc.2ch.net/test/read.cgi/unix/1063800495/237-238n>))
+* ((<RD|URL:http://www.ruby-lang.org/ja/man/html/RD.html>))を使う場合:
+  行頭の * でエントリの開閉ができるように
+  → ((<237-238|URL:http://www.bookshelf.jp/2ch/unix/1063800495.html>))
 
 * おまけ
     (setq howm-congrats-format
           '(
-            "%sキタ━━━━━(゜∀゜)━━━━━!!!!"
-            "(・∀・) %s!"
-            "（°Д°)%s？"
-            "（　´_ゝ`）＜　%s"
+            "(´・ω・｀) %s"
+            "(｀・ω・´) %s"
             ;; …以下略…
             ))
 
@@ -753,22 +743,8 @@ Emacs で断片的なメモをどんどんとるための環境です.
     * emacs から M-x grep して
         Run grep (like this): hcal.rb -l ~/memo/*.txt
 
-* カレンダー: 
-  ((<plan|URL:http://www.bitrot.de/plan.html>))
-  * メモから予定・〆切を抽出して, plan の予定表を作成できます (要 ruby)
-  * 手順
-    * 準備: plan を起動し, メニューの [file]→[file list] で
-      ~/.dayplan_tag を追加しておく
-    * 同梱の tag2plan で
-        tag2plan ~/howm/*/*/*.howm > ~/.dayplan_tag
-      のようにしてタグ抽出・変換
-    * plan で [file] → [reload]
-
 * 箇条書き支援:
-  私の場合, RD という書式を使いたいので, 以下を併用しています
-  * ((<rdtools|URL:http://www2.pos.to/~tosh/ruby/rdtool/ja/>))
-    の rd-mode.el
-  * ((<rd-mode-plus.el|URL:http://howm.sourceforge.jp/a/rd-mode-plus.el>))
+  * ((<org-mode との併用|URL:http://howm.sourceforge.jp/cgi-bin/hiki/hiki.cgi?OrgMode>))
 
 * 簡易小遣い帳
   * キーワードを決めて, 日記中に書いておく
@@ -801,13 +777,6 @@ Emacs で断片的なメモをどんどんとるための環境です.
   * 互換な検索関数を二本用意. 好きな方を使える.
     * real-grep (grep を呼ぶ)
     * fake-grep (elisp のみ)
-
-* 実行速度
-  * 私の旧環境だと, 検索もファイル開くのも 1〜2 秒ぐらい (grep 使用時)
-    * ファイル数 1000 あまり
-    * Pen III 700MHz, mem 384M
-  * いずれはデータベースなりキャッシュなり必要かも.
-    …と思ってたけど, メモのたまる速さよりもコンピュータの性能向上が速かった.
 
 * ファイル構成
   * howm 本体とは独立
@@ -905,25 +874,6 @@ Emacs で断片的なメモをどんどんとるための環境です.
     ((<バグレポートFAQ|URL:http://howm.sourceforge.jp/cgi-bin/hiki/hiki.cgi?BugReportFAQ>)),
     ((<YASWiki:オープンソースは下町気質|URL:http://web.archive.org/web/20041018232953/http://nnri.dip.jp/~yf/cgi-bin/yaswiki.cgi?name=%A5%AA%A1%BC%A5%D7%A5%F3%A5%BD%A1%BC%A5%B9%A4%CF%B2%BC%C4%AE%B5%A4%BC%C1>))
 
-* maxima-mode を導入すると howm がエラーに[2003-04-03]
-  * 数式処理システム Maxima に付随する smart-complete.el が行儀悪くて,
-    関数 split-string を上書きしてしまう
-    * 再帰で実装してるので, 長い文字列だと
-      「Lisp nesting exceeds max-lisp-eval-depth」.
-    * 私は /usr/share/emacs/site-lisp/smart-complete.el の該当箇所を
-      コメントアウトしてしまいました
-        ;(defun split-string (s bag)
-        ;  (cond ((equal (length s) 0) '(""))
-        ;       ((string-match bag s)
-        ;        (if (= (match-beginning  0) 0)
-        ;           (cons "" (split-string (substring s (match-end 0)) bag))
-        ;          (cons (substring s 0 (match-beginning 0))
-        ;                (split-string (substring s (match-end 0)) bag))))
-        ;       (t (cons s nil))))
-  * Maxima については
-      http://maxima.sourceforge.net/
-      http://phe.phyas.aichi-edu.ac.jp/~cyamauch/maxima/
-
 * 作者覚書
   * デバッグ用変数 howm-call-process-last-command
   * C-u M-x howm-bug-report で関連変数の一覧
@@ -933,113 +883,39 @@ Emacs で断片的なメモをどんどんとるための環境です.
 
 === 参考
 
+((<元ネタ|URL:http://howm.sourceforge.jp/cgi-bin/hiki/hiki.cgi?IdeaSource>))参照.
 特に, Q-pocket・HashedWiki・ChangeLog メモからいっぱいまねしてます. 感謝.
 
-* ((<Wiki|URL:http://c2.com/cgi/wiki>)):
-  web で誰でも編集＋お手軽リンク＋お手軽フォーマット
-  * ((<WikiModeDiscussion|URL:http://www.emacswiki.org/cgi-bin/wiki.pl/WikiModeDiscussion>))
-    (EmacsWiki): Emacs での Wiki
-  * ((<RWiki-mode|URL:http://pub.cozmixng.org/~the-rwiki/rw-cgi.rb?cmd=view;name=rwiki-mode>))
-    (RWiki): RWiki を Emacs から使う案
-  * ((<QP-Wiki|URL:http://pitecan.com/UnixMagazine/>))
-    (増井俊之さん): PDA で Wiki
-  * ((<HashedWiki|URL:http://www.google.com/search?q=hashedwiki>))
-    (SHIMADA Keiki さん): パラグラフ指向 Wiki
-  * ((<ishinao さんの各種ツール|URL:http://ishinao.net/>)):
-    Wiki にとらわれないアイデア満載
-  * ((<「日本発の wiki クローンリスト」|URL:http://www.yamdas.org/column/technique/clonelist.html>))
-    ((<「2」|URL:http://www.yamdas.org/column/technique/clonelist2.html>))
-    (yomoyomo さん)
-
-* HyperCard: card 型 database 的 visual script 言語環境???
-  * ((<「HyperCard」|URL:http://www.hyuki.com/yukiwiki/wiki.cgi?HyperCard>))
-    (YukiWiki)
-  * ((<「HyperCardのリアルタイム性」|URL:http://web.archive.org/web/20040111061953/http://mwave.sppd.ne.jp/wiki/pukiwiki.php?%5b%5bHyperCard%A4%CE%A5%EA%A5%A2%A5%EB%A5%BF%A5%A4%A5%E0%C0%AD%5d%5d>))
-    (SsPukiWiki)
-  * ((<「ハイパーカードでつくるオフィスシステム」|URL:http://www.kanzaki.com/hc/MacUser.html>))
-    (神崎正英さん)
-
-* メモとり環境
-  * 分類せず, 時間順と全文検索で管理
-    * ((<Q-Pocket|URL:http://pitecan.com/UnixMagazine/>))
-      (増井俊之さん):
-      PDA 版も
-    * ChangeLog メモ
-      * ((<「Unixのメモ技術」|URL:http://namazu.org/~satoru/unimag/1/>))
-        (高林哲さん)
-      * ((<「私の ChangeLog メモ活用法」|URL:http://nais.to/~yto/doc/zb/0016.html>))
-        (山下達雄さん)
-      * ((<「ChangeLog メモを試してみよう」|URL:http://pop-club.hp.infoseek.co.jp/emacs/changelog.html>))
-        (安宅正之さん)
-  * ((<簑系・超簑|URL:http://www.google.com/search?q=%E2%C0%8Cn+%92%B4%96%AA>))
-    (syo さん): ChangeLog + 目次・並べかえ・hyper link って感じ?
-  * スクラップブック
-    * ((<紙 2001|URL:http://www.vector.co.jp/soft/win95/writing/se120325.html>))
-      (洛西一周さん): 定番
-    * ((<WeBoX|URL:http://webox.sakura.ne.jp/software/webox/>))
-      (中村聡史さん): すごくいいらしい
-  * その他の Emacs 用ツール
-    * ((<notes-mode|URL:http://www.isi.edu/~johnh/SOFTWARE/NOTES_MODE/>))
-      (John Heidemann さん):
-      link の便利さを知りました
-      * ((<notes-mode と memo-mode の比較論|URL:http://mibai.tec.u-ryukyu.ac.jp/~oshiro/Programs/others/compare-notes-and-memo-mode.html>))
-        (西本孝志さん)
-    * ((<memoma|URL:http://web.archive.org/web/20040803170229/http://www.jaist.ac.jp/~tetsu/memoma/memoma.html>))
-      (原田哲治さん): MH 形式 → メールリーダでも読める
-    * ((<Um4|URL:http://www.d4.dion.ne.jp/~usuda/emacs/index.html>))
-      (臼田拓史さん): いろいろ保存メニュー
-    * rd-memo
-      (拙作. 開発終了 → ((<tar.gz|URL:http://howm.sourceforge.jp/a/rd-memo.tar.gz>)))
-      * ((<「コンピュータ環境でのメモ」|URL:http://pub.cozmixng.org/~the-rwiki/rw-cgi.rb?cmd=view;name=%A5%B3%A5%F3%A5%D4%A5%E5%A1%BC%A5%BF%B4%C4%B6%AD%A4%C7%A4%CE%A5%E1%A5%E2>))
-        (Toshさん): Wiki に注目したきっかけ
-  * howm 関連
-    * 移植
-      * ((<howm-mode.vim|URL:http://sworddancer.funkyboy.jp/howm_vim/>))
-        (七島功一さん)
-        ((<＋α|URL:http://www.google.com/search?q=vim+howm+%82%AD%82%D3%82%F1>)): vim 版
-      * ((<howm-wrap|URL:http://homepage3.nifty.com/~ko-ji/>))
-        (kimura さん)と
-        ((<howm-helper|URL:http://www.geocities.co.jp/Milano-Cat/2067/howm-init.html>))
-        (deecay さん): xyzzy 版
-      * ((<howm.mac|URL:http://mrm.seesaa.net/category/789739.html>))
-        (Mr.M さん)
-        ((<＋α|URL:http://howm.sourceforge.jp/cgi-bin/hiki/hiki.cgi?HideMaru>)): 秀丸版
-    * 浮沈式 todo リスト
-      * ((<wikilog|URL:http://web.archive.org/web/20040308005605/http://koten.hypermart.net/wikilog_rc01.l>))
-        (Gonza さん): xyzzy エディタ用の, Wiki + ChangeLog メモ
-        → ((<経緯|URL:http://pc2.2ch.net/test/read.cgi/win/1053880433/n29-36>))
-      * ((<howm式TODO管理WEBアプリ|URL:http://web.archive.org/web/20060128122538/http://www.lyricfathom.com/pukiwiki/pukiwiki.php?howm%BC%B0TODO%B4%C9%CD%FDWEB%A5%A2%A5%D7%A5%EA>))
-        (鮎川さん): PHP での実装
-      * ((<wema|URL:http://wema.sourceforge.jp/>))
-        (ふしはらかんさん): 付箋ベースの Wiki 的なもの.
-        付箋自体が上下に移動. 脱帽.
-      * ((<LesserWiki|URL:http://lesserwiki.org/>))
-        (yatsuさん): Ajax な Wiki
-      * ((<Whem|URL:http://www.n314.com/whem/?action=ExecLogin&mail=guest>))
-        (Nishimuraさん): Web用マルチユーザメモツール. goto/come-from リンクあり.
-* お気にいり
-  * ((<memo-mode|URL:http://mibai.tec.u-ryukyu.ac.jp/~oshiro/Programs/>))
-    (OSHIRO Naoki さん): 箇条書き支援. べたぼれ.
-  * ((<get-date|URL:http://mibai.tec.u-ryukyu.ac.jp/~oshiro/Programs/>))
-    (OSHIRO Naoki さん): 今日の日付を反射的に入力. べたぼれ.
-  * ((<migemo|URL:http://migemo.namazu.org/>))
-    (高林哲さん): ローマ字を入れるだけで日本語も検索. 愛用.
-  * ((<rdtool|URL:http://www.google.com/search?q=rdtool>))
-    (Toshさん): この README で使ってるドキュメントフォーマット. 愛用.
-  * ((<elscreen|URL:http://www.morishima.net/~naoto/j/software/elscreen/>))
-    (Naoto Morishimaさん): GNU screen の Emacs 版. 愛用.
-
-* elisp
-  * 広瀬雄二著「やさしい Emacs-Lisp 講座」(カットシステム, 1999)
-    ISBN 4-906391-70-2
-    → 
-    ((<オンライン版 (抄?)|URL:http://www.gentei.org/~yuuji/elisp/>))
-    * elisp はじめるなら圧倒的におすすめ
-    * 6.4 章末問題の「サクサク dired」を参考にさせていただきました
+* 広瀬雄二著「やさしい Emacs-Lisp 講座」(カットシステム, 1999)
+  ISBN 4-906391-70-2
+  → 
+  ((<オンライン版 (抄?)|URL:http://www.gentei.org/~yuuji/elisp/>))
+  * elisp はじめるなら圧倒的におすすめ
+  * 6.4 章末問題の「サクサク dired」を参考にさせていただきました
 
 === 更新記録
 
 thx > patch・改良案・指摘をくださった皆様
+
+* リリース予定版 howm-1.3.9rc1 [2010-12-29]
+  * Note
+    * ほとんど変更はありませんが, また一年ほどたったのでリリースしておきます.
+    * howm-test100702 との違いは, README の手直しや ext/tag2plan の削除だけ.
+    * このリリースが済んだら, デフォルト設定を変えて
+      隠し機能を公式化しただけのものを howm-1.4.0 としてリリースする予定です.
+  * 変更・改良
+    * メニューに「%here%(howm-menu-search "[断]片的" full t)」と書けば,
+      「断片的」を含むメモの内容全体をメニューに埋め込み.
+      ((<thx|URL:http://sourceforge.jp/projects/howm/lists/archive/eng/2010/000097.html>))
+      > Morgan Veyret さん (morgan.veyret at gmail.com).
+      (undocumented)
+      * 単に "断片的" としないのは, メニューファイル自身がヒットするのを避ける小細工
+  * fix
+    * メニューから y キー(または [予定] 上で RET)で予定表を開いたとき,
+      内容バッファがカーソル位置のメモになっていなかった.
+      ((<thx|URL:http://pc12.2ch.net/test/read.cgi/unix/1141892764/826>))
+    * README の古い記述を手直し
+    * メンテされていないツール(ext/tag2plan)を削除
 
 * リリース版 howm-1.3.8 [2009-12-31]
   * Note

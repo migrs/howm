@@ -1,7 +1,7 @@
 ;;; howm-reminder.el --- Wiki-like note-taking tool
-;;; Copyright (c) 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009
-;;;   by HIRAOKA Kazuyuki <khi@users.sourceforge.jp>
-;;; $Id: howm-reminder.el,v 1.75 2009-06-08 14:13:13 hira Exp $
+;;; Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010
+;;;   HIRAOKA Kazuyuki <khi@users.sourceforge.jp>
+;;; $Id: howm-reminder.el,v 1.77 2010-07-02 14:25:45 hira Exp $
 ;;;
 ;;; This program is free software; you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
@@ -248,7 +248,8 @@ schedules outside the range in %reminder in the menu.")
       (let ((items (need (howm-list-reminder-internal howm-schedule-types))))
         (howm-list-reminder-final-setup howm-list-schedule-name
                                         (howm-schedule-sort-items items)))
-      (howm-reminder-goto-today))))
+      (howm-reminder-goto-today)
+      (howm-view-summary-check))))
 
 (defun howm-list-reminder-internal (types)
   (let* ((r (howm-reminder-regexp types))

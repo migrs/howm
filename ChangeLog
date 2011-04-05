@@ -1,3 +1,32 @@
+2010-12-29  HIRAOKA Kazuyuki  <khi@users.sourceforge.jp>
+
+	* configure.in: version 1.3.9rc1
+
+2010-07-02  HIRAOKA Kazuyuki  <khi@users.sourceforge.jp>
+
+	* configure.in: test version
+
+	* howm-reminder.el (howm-list-schedule): fix.
+	contents buffer was not updated if this function was called
+	from menu.
+	thx > http://pc12.2ch.net/test/read.cgi/unix/1141892764/826
+
+2010-05-05  HIRAOKA Kazuyuki  <khi@users.sourceforge.jp>
+
+	* configure.in: test version
+
+	* howm.el: update copyright years
+
+	* howm-menu.el
+	(howm-menu-search): add new options for formatter and regexp search.
+	thx > Morgan Veyret san (morgan.veyret at gmail.com)
+	http://sourceforge.jp/projects/howm/lists/archive/eng/2010/000097.html
+	(howm-menu-general): add a new formatter to show full text.
+	(howm-menu-format-full): ditto.
+	(howm-menu-invoke): 
+	open item when RET is hit in menu if howm-menu-list-item
+	property is given at the current point.
+
 2009-12-31  HIRAOKA Kazuyuki  <khi@users.sourceforge.jp>
 
 	* configure.in: version 1.3.8

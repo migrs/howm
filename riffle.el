@@ -1,7 +1,7 @@
 ;;; riffle.el --- template of list browser with immediate preview
-;;; Copyright (c) 2004, 2005, 2006, 2007, 2008, 2009
-;;;   by HIRAOKA Kazuyuki <khi@users.sourceforge.jp>
-;;; $Id: riffle.el,v 1.35 2009-05-30 13:54:03 hira Exp $
+;;; Copyright (C) 2004, 2005, 2006, 2007, 2008, 2009, 2010
+;;;   HIRAOKA Kazuyuki <khi@users.sourceforge.jp>
+;;; $Id: riffle.el,v 1.36 2010-05-05 13:18:39 hira Exp $
 ;;;
 ;;; This program is free software; you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
