@@ -1,7 +1,7 @@
 ;;; howm-mode.el --- Wiki-like note-taking tool
-;;; Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010
+;;; Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
 ;;;   HIRAOKA Kazuyuki <khi@users.sourceforge.jp>
-;;; $Id: howm-mode.el,v 1.310 2010-05-05 13:18:39 hira Exp $
+;;; $Id: howm-mode.el,v 1.310.2.1 2011-01-02 12:05:56 hira Exp $
 ;;;
 ;;; This program is free software; you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
@@ -349,7 +349,8 @@ key	binding
       ;; I don't understand this. [2004-12-18]
       (howm-fontify t)
       ;; make-local-hook is obsolete for emacs >= 21.1.
-      (make-local-hook 'after-save-hook)
+      (when (fboundp 'make-local-hook)
+        (make-local-hook 'after-save-hook))
       (add-hook 'after-save-hook 'howm-after-save t t))))
 
 (defun howm-after-save ()

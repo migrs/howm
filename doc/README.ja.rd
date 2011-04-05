@@ -1,7 +1,7 @@
 =begin
 
 = howm (一人お手軽 Wiki もどき)
-$Id: README.ja.rd,v 1.309 2010-12-30 14:38:44 hira Exp $
+$Id: README.ja.rd,v 1.309.2.1 2011-01-02 12:05:56 hira Exp $
 
 Emacs で断片的なメモをどんどんとるための環境です.
 分類機能はあえてつけません.
@@ -896,6 +896,11 @@ Emacs で断片的なメモをどんどんとるための環境です.
 === 更新記録
 
 thx > patch・改良案・指摘をくださった皆様
+
+* リリース版 howm-1.3.9.1 [2011-01-02]
+  * fix: emacs-24.0.50 でのエラー
+    (Symbol's function definition is void: make-local-hook).
+    thx > 山本 宗宏 さん (munepi at vinelinux.org)
 
 * リリース版 howm-1.3.9 [2010-12-30]
   * Note

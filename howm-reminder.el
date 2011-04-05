@@ -1,7 +1,7 @@
 ;;; howm-reminder.el --- Wiki-like note-taking tool
-;;; Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010
+;;; Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
 ;;;   HIRAOKA Kazuyuki <khi@users.sourceforge.jp>
-;;; $Id: howm-reminder.el,v 1.77 2010-07-02 14:25:45 hira Exp $
+;;; $Id: howm-reminder.el,v 1.77.2.1 2011-01-02 12:05:56 hira Exp $
 ;;;
 ;;; This program is free software; you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
